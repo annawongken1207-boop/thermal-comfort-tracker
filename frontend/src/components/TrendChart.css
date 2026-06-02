@@ -1,0 +1,121 @@
+.trend-chart-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.trend-chart-header {
+  margin-bottom: 20px;
+}
+
+.trend-chart-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.trend-chart-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid #8884d8;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.stat-value.max {
+  color: #ff4444;
+}
+
+.stat-value.min {
+  color: #4488ff;
+}
+
+.trend-chart-loading,
+.trend-chart-error,
+.trend-chart-empty {
+  padding: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  background: white;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.trend-chart-error {
+  color: #ff4444;
+  background-color: #ffe8e8;
+}
+
+.trend-chart-empty {
+  color: #999;
+  background-color: #f9f9f9;
+}
+
+.trend-chart-footer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.trend-chart-info {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .trend-chart-container {
+    padding: 15px;
+  }
+
+  .trend-chart-title {
+    font-size: 16px;
+  }
+
+  .trend-chart-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .stat-label {
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .stat-value {
+    font-size: 16px;
+  }
+}
